@@ -1,0 +1,19 @@
+{
+  "name": "hw9",
+  "version": "1.0.0",
+  "description": "READEME homework assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broganneagle/HW9.git"
+  },
+  "author": "Brogan N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/broganneagle/HW9/issues"
+  },
+  "homepage": "https://github.com/broganneagle/HW9#readme"
+}
