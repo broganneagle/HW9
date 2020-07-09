@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   MIT License
 
   ## Author 
-  ![GitHub profile pic](${data.image})
+  ${data.username}
 
   ## Badges
   ![badmath](https://img.shields.io/github/repo-size/${data.username}/${data.repo})
