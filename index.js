@@ -1,7 +1,7 @@
-const generateMarkdown = require("./utils/generateMarkdown")
-var inquirer = require("inquirer")
-var axios = require("axios")
-const fs = require("fs")
+const generateMarkdown = require("./utils/generateMarkdown");
+var inquirer = require("inquirer");
+var axios = require("axios");
+const fs = require("fs");
 
 //inquirer questions
 const questions = [
@@ -85,6 +85,4 @@ function init() {
             })
 
         }
-    
-
 init();
