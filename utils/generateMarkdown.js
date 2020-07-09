@@ -4,7 +4,7 @@ function generateMarkdown(data) {
   # Project Title : ${data.title}
 
   ## Project Description:
-  ${data.desc}
+  ${data.description}
 
   ## Table of Contents
   * [Installation](#installation)
@@ -36,7 +36,7 @@ function generateMarkdown(data) {
 
   ## Author 
   ![GitHub profile pic](${data.image})
-  
+
   ## Badges
   ![badmath](https://img.shields.io/github/repo-size/${data.username}/${data.repo})
   `;

@@ -28,7 +28,7 @@ const questions = [
     {
         type: "input",
         message: "How do you describe your Project?.",
-        name: "desc",
+        name: "description",
         default: "READEME homework assignment"
 
     },
@@ -71,10 +71,10 @@ function init() {
         .then(answers => {
             console.log(answers)
                 .then(response => {
-                    console.log(response)
-                    // var imageURL = response.data.avatar_url
-                    // answers.image = imageURL;
-                    // console.log(imageURL);
+                    console.log(response);
+                    var imageURL = response.data.avatar_url;
+                    answers.image = imageURL;
+                    console.log(imageURL);
                     fs.writeFile("README.md", generateMarkdown(answers), function (err) {
                         if (err) {
                             throw err;
