@@ -1,6 +1,5 @@
 const generateMarkdown = require("./utils/generateMarkdown");
 var inquirer = require("inquirer");
-var axios = require("axios");
 const fs = require("fs");
 
 //inquirer questions
@@ -51,7 +50,7 @@ const questions = [
 
     {
         type: "input",
-        message: "please enter git hub user names of the contributor if any (If there are mulitple contributor, seperate names with comma and no space! )",
+        message: "please enter git hub user names of the contributor if any (If there are mulitple contributor, seperate names with comma and no space.)",
         name: "contributors",
         default: " "
     },
@@ -71,12 +70,11 @@ function init() {
         .prompt(questions)
         .then(answers => {
             console.log(answers)
-            axios.get("https://api.github.com/users/" + answers.username)
                 .then(response => {
                     console.log(response)
-                    var imageURL = response.data.avatar_url
-                    answers.image = imageURL;
-                    console.log(imageURL);
+                    // var imageURL = response.data.avatar_url
+                    // answers.image = imageURL;
+                    // console.log(imageURL);
                     fs.writeFile("README.md", generateMarkdown(answers), function (err) {
                         if (err) {
                             throw err;
