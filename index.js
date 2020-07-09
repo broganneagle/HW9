@@ -66,18 +66,83 @@ const questions = [
 
 
 function init() {
-    inquirer
-        .prompt(questions)
-        .then(answers => {
+    inquirer.prompt(questions).then(answers => {
+        fs.appendFileSync("README.md", ("This was developed by an account with the usersame: " + response.username + '\n') + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", ("The title of this project is " + response.title + '\n') + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", ("#" + response.repo) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", (response.description) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", (response.install) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", (response.usage) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", (response.contributors) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        fs.appendFileSync("README.md", (response.test) + '\n', function(err){
+            if (err){
+                console.log(err);
+            } else {
+                console.log("true");
+            }
+        })
+
+        
             console.log(answers)
                 .then(response => {
                     console.log(response);
                     fs.writeFile("README.md", generateMarkdown(answers), function (err) {
                         if (err) {
                             throw err;
+                        } else{
+                            console.log("true");
                         }})
                 })
-            })
+             })
 
         }
 init();
